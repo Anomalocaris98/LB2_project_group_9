@@ -1,6 +1,6 @@
 # LB2_project_group_9
-Prediction of secretory signal peptides in proteins
-# LB2_project_Group_9
+***Prediction of secretory signal peptides in proteins***
+
 # ***DATA COLLECTION***
 The first step for the project is **data collection** : for any machine learning model it is always necessary to acquire high-quality data,
 to ensure the correct traning of it. We retrived relevant protein sequences from Uniprot database, filtering and creating 
