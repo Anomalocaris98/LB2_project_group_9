@@ -79,7 +79,3 @@ Script that merges the five enriched subsets into a **single training dataset** 
 - Reads `subset1_arricchito.tsv` to `subset5_arricchito.tsv`.
 - Concatenates all rows in order.
 - Saves the result to `training_file_all_seq.tsv`.
-
-**Example usage:**
-```bash
-python merge_files_trainingset.py
