@@ -48,4 +48,7 @@ Open and run the notebook top-to-bottom (Jupyter / VS Code). Make sure the five 
 
 
 ![Precision–Recall Curves](./Plots/all_pr_curves.png)
+## Example heatmap from matrix 0
+![Heatmap PSWM Matrix 0](./Plots/heatmap_pswm_matrix_0_dark.png)
+!
 
