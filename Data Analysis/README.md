@@ -23,7 +23,6 @@ This notebook computes and visualizes **frequency and weight matrices** for sign
 - Reads prepared training subsets.
 - Calculates amino acid occurrence and position-specific frequencies.
 - Generates visual matrices showing the positional preference of residues.
-- Outputs data used later in the `vonHeijne` algorithm for PSWM construction.
 
 [Open matrices.ipynb](./matrices.ipynb)
 
@@ -36,7 +35,6 @@ Notebook dedicated to creating **summary visualizations** from the processed dat
 - Distribution of positive vs negative sequences per subset.
 - Comparative amino acid frequency charts.
 - Heatmaps of feature correlations or composition patterns.
-- Export of figures for reports or publication material.
 
 [Open plots.ipynb](./plots.ipynb)
 
@@ -60,17 +58,10 @@ Analyzes and plots the **length distribution** of protein sequences in both posi
 1. Load enriched datasets produced in the [Data Preparation](../Data%20Preparation/README.md) phase.  
 2. Compute general and position-specific statistics.  
 3. Generate matrices, plots, and histograms summarizing dataset characteristics.  
-4. Export visualization outputs for interpretation or model evaluation.
+4. Export visualization outputs for interpretation 
 
 ---
 
-## Outputs for Next Stages
-
-The matrices and visual insights from this stage are used by the  
-[`vonHeijne`](../vonHeijne/README.md) stage to:
-- Initialize the PSWM matrices,
-- Validate dataset consistency,
-- Support result visualization.
 
 ---
 
@@ -80,7 +71,3 @@ The matrices and visual insights from this stage are used by the
 - Ensure that enriched `.tsv` files and related subsets from Data Preparation are available before running the analyses.  
 - Outputs (figures and computed matrices) are stored automatically in local directories specified within each notebook.
 
----
-
-**Maintainers:**  
-LB2 Project Group 9 — Signal Peptide Prediction Pipeline
