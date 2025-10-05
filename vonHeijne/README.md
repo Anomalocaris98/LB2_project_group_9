@@ -53,6 +53,20 @@ Dependencies:
 
 ---
 
+## Example Outputs
+
+### Aggregated Precision–Recall Curves
+<p align="center">
+  <img src="./Plots/all_pr_curves.png" alt="Precision–Recall Curves across Subsets" width="600"/>
+</p>
+
+### Example PSWM Heatmap
+<p align="center">
+  <img src="./Plots/heatmap_pswm_matrix_0_dark.png" alt="PSWM Heatmap Example" width="600"/>
+</p>
+
+---
+
 ## Cross-Validation Results
 
 | Subset | MCC   | Precision | Accuracy | Sensitivity | Confusion Matrix |
