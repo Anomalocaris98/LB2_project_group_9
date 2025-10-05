@@ -71,7 +71,7 @@ Analyzes and plots the **length distribution** of protein sequences in both posi
 - Ensure that enriched `.tsv` files and related subsets from Data Preparation are available before running the analyses.  
 - Outputs (figures and computed matrices) are stored automatically in local directories specified within each notebook.
 
-## 📊 Visual Outputs
+## Visual Outputs
 
 ### Species and Kingdom Occurrence
 <p align="center">
