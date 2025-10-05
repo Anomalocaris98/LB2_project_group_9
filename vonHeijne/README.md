@@ -45,3 +45,7 @@ Open and run the notebook top-to-bottom (Jupyter / VS Code). Make sure the five 
 - `pandas`, `numpy`
 - `matplotlib`, `seaborn`
 - `scikit-learn` (for precision–recall)
+
+
+![Precision–Recall Curves](./Plots/all_pr_curves.png)
+
