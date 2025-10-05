@@ -7,90 +7,77 @@ This repository contains the code and data developed for the **Laboratory of Bio
 1. [Data Collection](#data-collection)
 2. [Data Preparation](#data-preparation)
 3. [Data Analysis](#data-analysis)
-4. [Feature Extraction](#feature-extraction)
-5. [Machine Learning Implementation](#machine-learning-implementation)
-6. [Model Evaluation](#model-evaluation)
-7. [Discussion](#discussion)
-8. [Contacts](#contacts)
+4. [von Heijne Implementation and Model Evaluation](#von-heijne-implementation-and-model-evaluation)
+5. [Discussion](#discussion)
+6. [Contacts](#contacts)
 
 ---
 
 ## Data Collection
-This phase focuses on retrieving protein datasets from **UniProtKB**.  
-Both web interface and API approaches were used to obtain:
-- Positive datasets (proteins containing signal peptides)
-- Negative datasets (proteins without signal peptides)
+This phase focuses on retrieving protein datasets from **UniProtKB** using both:
+- Web interface queries
+- Automated API requests
 
-After retrieval:
-- **MMseqs2** was used to cluster sequences and reduce redundancy.  
-- Representative sequences were extracted for use in downstream analysis.
+The resulting datasets include:
+- **Positive** proteins (containing signal peptides)  
+- **Negative** proteins (without signal peptides)
 
-[Go to Data Collection Folder](./Data%20Collection)
+Post-retrieval steps:
+- **MMseqs2** was used to cluster sequences and remove redundancy.  
+- Representative sequences were extracted to form balanced and biologically diverse sets.
+
+📁 [Open Data Collection Folder](./Data%20Collection)
 
 ---
 
 ## Data Preparation
 Preprocessing and organization of datasets for **cross-validation** and **benchmarking**.  
 This includes:
-- Creation of training and benchmark sets  
-- Redundancy reduction  
-- Labeling of sequences for supervised learning  
-- Data splitting for 5-fold validation
+- Creation of training, validation, and benchmark sets  
+- Removal of redundant entries  
+- Label assignment for supervised learning  
+- Construction of consistent subsets for 5-fold validation
 
-[Go to Data Preparation Folder](./Data%20Preparation)
+📁 [Open Data Preparation Folder](./Data%20Preparation)
 
 ---
 
 ## Data Analysis
-Analysis and visualization of dataset characteristics, including:
-- Sequence length distribution  
-- Amino acid frequency  
-- Species and kingdom occurrence  
-- Dataset balance and redundancy analysis  
+Exploratory analysis and visualization of dataset properties, including:
+- **Sequence length distribution**
+- **Amino acid residue frequency**
+- **Species and kingdom representation**
+- **Comparison between training and benchmark datasets**
 
-[Go to Data Analysis Folder](./Data%20Analysis)
-
----
-
-## Feature Extraction
-Extraction of relevant biological and positional features used for classification models.  
-This phase includes:
-- Construction of **Position-Specific Weight Matrices (PSWMs)**  
-- Computation of positional amino acid frequencies  
-- Identification of discriminative features between positive and negative sets
-
-[Go to Feature Extraction Folder](./Feature_Extraction)
+📁 [Open Data Analysis Folder](./Data%20Analysis)
 
 ---
 
-## Machine Learning Implementation
-Implementation of:
-- **von Heijne’s algorithm** for position-specific scoring  
-- **Support Vector Machine (SVM)** classifier for supervised learning  
+## von Heijne Implementation and Model Evaluation
+Implementation of the **von Heijne algorithm**, which computes **Position-Specific Weight Matrices (PSWMs)** for analyzing signal peptide sequences.  
 
-[Go to von Heijne Implementation Folder](./vonHeijne)
+This stage includes:
+- Generation of PSWM matrices from training subsets  
+- Scoring of validation and testing sequences  
+- Evaluation via:
+  - Precision–Recall curves  
+  - Confusion matrices  
+  - Matthews Correlation Coefficient (MCC)  
+  - Accuracy, Precision, and Sensitivity
 
----
-
-## Model Evaluation
-Evaluation of algorithms using:
-- Cross-validation  
-- Precision–Recall curves  
-- Confusion matrices  
-- Matthews Correlation Coefficient (MCC)  
-
-The evaluation pipeline ensures robust model performance analysis on both benchmark and blind test sets.
+📁 [Open von Heijne Folder](./vonHeijne)
 
 ---
 
 ## Discussion
-This section provides interpretation of the obtained results, comparison of methods, and insights into biological implications of the predictions.
+Interpretation of results and evaluation of algorithmic performance.  
+Includes comparison between subsets and overall cross-validation outcomes, as well as biological insights derived from signal peptide sequence patterns.
 
 ---
 
 ## Contacts
-- **Valerio Piersanti** — valerio.piersanti3@studio.unibo.it  
-- **Kagan Saglam** — kagan.saglam@studio.unibo.it  
+- **Valerio Piersanti** — valerio.piersanti3@studio.unibo.it
 - **Andrea Lenti** — andrea.lenti2@studio.unibo.it  
+- **Kagan Saglam** — kagan.saglam@studio.unibo.it  
 - **Enrico Gallus** — enrico.gallus@studio.unibo.it  
 - **Massimo Lanari** — massimo.lanari@studio.unibo.it
