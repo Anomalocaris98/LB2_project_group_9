@@ -75,29 +75,16 @@ Analyzes and plots the **length distribution** of protein sequences in both posi
 
 ### Species and Kingdom Occurrence
 <p align="center">
-  <a href="./Species_occurrence_in_training_set_pie.png"><img src="./Species_occurrence_in_training_set_pie.png" width="250"/></a>
   <a href="./Kingdom_occurrence_in_training_set_pie.png"><img src="./Kingdom_occurrence_in_training_set_pie.png" width="250"/></a>
-</p>
-<p align="center">
-  <a href="./Species_occurrence_in_benchmark_set_pie.png"><img src="./Species_occurrence_in_benchmark_set_pie.png" width="250"/></a>
   <a href="./Kingdom_occurrence_in_benchmark_set_pie.png"><img src="./Kingdom_occurrence_in_benchmark_set_pie.png" width="250"/></a>
 </p>
 
 ---
 
-### Sequence Length Distributions
+### Sequence Length Distributions Training (dx) and Benchmark (sx)
 <p align="center">
   <a href="./sequence_length_training_hist.png"><img src="./sequence_length_training_hist.png" width="250"/></a>
   <a href="./sequence_length_benchmark_hist.png"><img src="./sequence_length_benchmark_hist.png" width="250"/></a>
-</p>
-<p align="center">
-  <a href="./sequence_length_total_hist.png"><img src="./sequence_length_total_hist.png" width="250"/></a>
-  <a href="./sequence_length_training_k.png"><img src="./sequence_length_training_k.png" width="250"/></a>
-</p>
-<p align="center">
-  <a href="./sequence_length_benchmark_k.png"><img src="./sequence_length_benchmark_k.png" width="250"/></a>
-  <a href="./sequence_length_total_k.png"><img src="./sequence_length_total_k.png" width="250"/></a>
-</p>
 
 ---
 
@@ -111,11 +98,6 @@ Analyzes and plots the **length distribution** of protein sequences in both posi
 </p>
 
 ---
-
-### Benchmark Overview
-<p align="center">
-  <a href="./benchmark_arricchito.tsv"><img src="./benchmark_arricchito.tsv" width="250"/></a>
-</p>
 
 
 
