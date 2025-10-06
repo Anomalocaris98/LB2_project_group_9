@@ -26,7 +26,7 @@ Post-retrieval steps:
 - **MMseqs2** was used to cluster sequences and remove redundancy.  
 - Representative sequences were extracted to form balanced and biologically diverse sets.
 
-📁 [Open Data Collection Folder](./Data%20Collection)
+[Open Data Collection Folder](./Data%20Collection)
 
 ---
 
@@ -38,7 +38,7 @@ This includes:
 - Label assignment for supervised learning  
 - Construction of consistent subsets for 5-fold validation
 
-📁 [Open Data Preparation Folder](./Data%20Preparation)
+[Open Data Preparation Folder](./Data%20Preparation)
 
 ---
 
@@ -49,7 +49,7 @@ Exploratory analysis and visualization of dataset properties, including:
 - **Species and kingdom representation**
 - **Comparison between training and benchmark datasets**
 
-📁 [Open Data Analysis Folder](./Data%20Analysis)
+[Open Data Analysis Folder](./Data%20Analysis)
 
 ---
 
@@ -65,7 +65,7 @@ This stage includes:
   - Matthews Correlation Coefficient (MCC)  
   - Accuracy, Precision, and Sensitivity
 
-📁 [Open von Heijne Folder](./vonHeijne)
+[Open von Heijne Folder](./vonHeijne)
 
 ---
 
