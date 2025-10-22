@@ -27,42 +27,45 @@ The notebook implements:
 ## Feature Set
 
 Each sequence is represented by **33 numerical features** and one label (0/1).  
-The features fall into three main groups:
+| **Index** | **Feature Name**             | **Description**                                                                            |
+| --------- | ---------------------------- | ------------------------------------------------------------------------------------------ |
+| 0         | `P_count_first70`            | Number of Proline (P) residues in the first 70 amino acids                                 |
+| 1         | `P_density_first70`          | Proline density in the first 70 amino acids (`count / length`)                             |
+| 2         | `pswm_score`                 | Maximum PSWM (Position-Specific Weight Matrix) score across the sequence (Von Heijne-like) |
+| 3         | `kd_mean_70`                 | Mean hydrophobicity (Kyte–Doolittle scale) in the first 70 residues                        |
+| 4         | `kd_win7_max`                | Maximum 7-residue window mean (Kyte–Doolittle hydrophobicity)                              |
+| 5         | `polarity_mean_70`           | Mean polarity (Zimmerman scale) in the first 70 residues                                   |
+| 6         | `polarity_win7_max`          | Maximum 7-residue window mean for polarity                                                 |
+| 7         | `volume_mean_70`             | Mean side-chain volume in the first 70 residues                                            |
+| 8         | `volume_win7_max`            | Maximum 7-residue window mean for side-chain volume                                        |
+| 9         | `charge_mean_70`             | Mean side-chain charge at pH 7 across the first 70 residues                                |
+| 10        | `charge_win7_max`            | Maximum 7-residue window mean for charge                                                   |
+| 11        | `longest_hydrophobic_run_70` | Longest contiguous hydrophobic run (Kyte–Doolittle ≥ 1.6)                                  |
+| 12        | `entropy_70`                 | Shannon entropy in the first 70 residues (sequence complexity)                             |
+| 13        | `num_disulfide_motifs_70`    | Count of disulfide motifs “C…C” (2–5 aa apart) within the first 70 residues                |
+| 14        | `%A`                         | Fraction of Alanine in the first 70 residues                                               |
+| 15        | `%C`                         | Fraction of Cysteine                                                                       |
+| 16        | `%D`                         | Fraction of Aspartic acid                                                                  |
+| 17        | `%E`                         | Fraction of Glutamic acid                                                                  |
+| 18        | `%F`                         | Fraction of Phenylalanine                                                                  |
+| 19        | `%G`                         | Fraction of Glycine                                                                        |
+| 20        | `%H`                         | Fraction of Histidine                                                                      |
+| 21        | `%I`                         | Fraction of Isoleucine                                                                     |
+| 22        | `%K`                         | Fraction of Lysine                                                                         |
+| 23        | `%L`                         | Fraction of Leucine                                                                        |
+| 24        | `%M`                         | Fraction of Methionine                                                                     |
+| 25        | `%N`                         | Fraction of Asparagine                                                                     |
+| 26        | `%P`                         | Fraction of Proline                                                                        |
+| 27        | `%Q`                         | Fraction of Glutamine                                                                      |
+| 28        | `%R`                         | Fraction of Arginine                                                                       |
+| 29        | `%S`                         | Fraction of Serine                                                                         |
+| 30        | `%T`                         | Fraction of Threonine                                                                      |
+| 31        | `%V`                         | Fraction of Valine                                                                         |
+| 32        | `%W`                         | Fraction of Tryptophan                                                                     |
+| 33        | `%Y`                         | Fraction of Tyrosine                                                                       |
+| 34        | `label`                      | Binary class label (0 = no signal peptide, 1 = contains signal peptide)                    |
 
-### 1. PSWM-Based Feature
-| Index | Feature | Description |
-|--------|----------|-------------|
-| 0 | `PSWM_score` | Highest log-odds score obtained by sliding a window (length=15) across the sequence using the Position-Specific Weight Matrix computed from positive sequences. |
 
-### 2. Proline Composition (2 features)
-| Index | Feature | Description |
-|--------|----------|-------------|
-| 1 | `P_count_70` | Number of proline residues in the first 70 amino acids. |
-| 2 | `P_density_70` | Proline count normalized by sequence length (0–70 aa). |
-
-### 3. Physicochemical Descriptors (10 features)
-| Index | Feature | Description |
-|--------|----------|-------------|
-| 3 | `kd_mean_70` | Mean Kyte–Doolittle hydrophobicity (first 70 aa). |
-| 4 | `kd_win7_max` | Maximum 7-aa window mean hydrophobicity. |
-| 5 | `polarity_mean_70` | Mean polarity (Zimmerman scale). |
-| 6 | `polarity_win7_max` | Maximum 7-aa window polarity mean. |
-| 7 | `volume_mean_70` | Mean side-chain volume. |
-| 8 | `volume_win7_max` | Maximum side-chain volume mean. |
-| 9 | `charge_mean_70` | Mean side-chain charge at pH ~7. |
-| 10 | `charge_win7_max` | Maximum 7-aa window charge mean. |
-| 11 | `longest_hydrophobic_run_70` | Length of the longest continuous run with hydrophobicity ≥ 1.6. |
-| 12 | `entropy_70` | Shannon entropy of amino acid composition (first 70 aa). |
-
-### 4. Amino Acid Composition (20 features)
-| Index | Feature | Description |
-|--------|----------|-------------|
-| 13–32 | `%A` to `%Y` | Relative frequency of each amino acid (A, C, D, …, Y) in the first 70 residues. |
-
-### 5. Label
-| Index | Feature | Description |
-|--------|----------|-------------|
-| 33 | `label` | Binary class label (1 = signal peptide, 0 = no signal peptide). |
 
 ---
 
