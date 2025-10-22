@@ -96,20 +96,7 @@ No random shuffling is applied; folds correspond exactly to the predefined subse
 
 ---
 
-## How to Run
-
-1. Place all five `.tsv` input files in the same directory as the notebook.  
-2. Open and run `all_features_extraction.ipynb` in Jupyter or VSCode.  
-3. The notebook will:
-   - Extract all features from the sequences.
-   - Compute PSWM matrices from positive examples.
-   - Build 5 feature matrices (`matrix1`–`matrix5`).
-   - Train and evaluate Random Forest + SVM models.
-   - Save result plots in the working directory.
-
----
-
-## Output Files
+## Output
 
 | File | Description |
 |------|--------------|
@@ -118,10 +105,3 @@ No random shuffling is applied; folds correspond exactly to the predefined subse
 | `matrixX.npz` | NumPy arrays containing extracted features and labels. |
 
 ---
-
-## Requirements
-
-- Python ≥ 3.9  
-- NumPy, Pandas, Matplotlib  
-- scikit-learn  
-- Biopython (for amino acid scales, optional)
