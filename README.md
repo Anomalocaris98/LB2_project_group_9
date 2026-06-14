@@ -1,4 +1,4 @@
-# LB2_project_Group_9
+# Signal Peptide Prediction with von Heijen implementation and Model Evaluation
 This repository contains the code and data developed for the **Laboratory of Bioinformatics 2** course project.
 
 ---
